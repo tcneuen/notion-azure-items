@@ -78,6 +78,8 @@ def update_notion_database(notion_items):
                 new_status = "In progress"
             if work_item_data["State"] == "Closed":
                 new_status = "Done"
+            if work_item_data["State"] == "Resolved":
+                new_status = "Done"
             if work_item_data["State"] == "Removed":
                 new_status = "Removed"
             notion.pages.update(
